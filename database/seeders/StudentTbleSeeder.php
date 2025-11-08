@@ -17,7 +17,7 @@ class StudentTbleSeeder extends Seeder
     public function run(): void
     {
         $faker = Faker::create();
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 50; $i++) {
             DB::table('student')->insert([
                 'firstname' => $faker->firstName,
                 'lastname' => $faker->lastName,
