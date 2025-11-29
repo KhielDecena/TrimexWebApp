@@ -16,6 +16,14 @@ class Studenttype extends GraphQLType
     public function fields(): array
     {
         return [
+            'id' => [
+                'type' => \GraphQL\Type\Definition\Type::nonNull(\GraphQL\Type\Definition\Type::int()),
+                'description' => 'The id of the student'
+            ],
+            'firstname' => [
+                'type' => \GraphQL\Type\Definition\Type::string(),
+                'description' => 'The first name of the student'
+            ],
 
         ];
     }

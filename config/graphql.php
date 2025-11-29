@@ -76,9 +76,13 @@ return [
         'default' => [
             'query' => [
                 // ExampleQuery::class,
+                'student' => \App\GraphQL\Queries\StudentQuery::class,
+                'teacher' => \App\GraphQL\Queries\TeacherQuery::class,
             ],
             'mutation' => [
                 // ExampleMutation::class,
+                'student' => \App\GraphQL\Mutations\StudentMutation::class,
+                'teacher' => \App\GraphQL\Mutations\TeacherMutation::class,
             ],
             // The types only available in this schema
             'types' => [
@@ -113,6 +117,12 @@ return [
     // ]
     //
     'types' => [
+    'student_input' => \App\GraphQL\Types\StudentInputType::class,
+
+    'teacher_input' => \App\GraphQL\Types\TeacherInputType::class,
+    'teacher_type' => \App\GraphQL\Types\TeacherType::class,
+        
+    'student_type' => \App\GraphQL\Types\StudentType::class,
         // ExampleType::class,
         // ExampleRelationType::class,
         // \Rebing\GraphQL\Support\UploadType::class,
